@@ -1,0 +1,13 @@
+[project]
+name = "exploring-peps"
+version = "0.1.0"
+description = "Code supporting my blog post on converting Python Enhancement Proposals (PEPs) to RDF"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "networkx>=3.4.2",
+    "numpy>=2.2.2",
+    "plotly>=5.24.1",
+    "rdflib>=7.1.1",
+    "requests>=2.32.3",
+]

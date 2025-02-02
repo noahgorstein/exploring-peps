@@ -1,0 +1,131 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix peps: <https://noahgorstein.com/peps/schema/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+peps:dateCreated a owl:DatatypeProperty ;
+    rdfs:label "creation date" ;
+    rdfs:comment "The date the PEP was created" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range xsd:date .
+
+peps:discussionsTo a owl:DatatypeProperty ;
+    rdfs:label "discussions to" ;
+    rdfs:comment "The mailing list or URL where the PEP is being discussed" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range xsd:string .
+
+peps:hasAuthor a owl:ObjectProperty ;
+    rdfs:label "author of the PEP" ;
+    rdfs:comment "An author of the PEP." ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range peps:Author .
+
+peps:hasPost a owl:ObjectProperty ;
+    rdfs:label "has post associated with PEP" ;
+    rdfs:comment "History of significant posts related to the PEP" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range peps:Post .
+
+peps:hasResolution a owl:ObjectProperty ;
+    rdfs:label "has a resolution" ;
+    rdfs:comment "Resolution for this PEP" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range peps:Resolution .
+
+peps:id a owl:DatatypeProperty ;
+    rdfs:label "id of the PEP" ;
+    rdfs:comment "the identifier of the PEP." ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range xsd:int .
+
+peps:postDate a owl:DatatypeProperty ;
+    rdfs:label "post date" ;
+    rdfs:comment "The date of the post" ;
+    rdfs:domain peps:Post ;
+    rdfs:range xsd:date .
+
+peps:postUrl a owl:DatatypeProperty ;
+    rdfs:label "post URL" ;
+    rdfs:comment "The URL of the post" ;
+    rdfs:domain peps:Post ;
+    rdfs:range xsd:anyURI .
+
+peps:pythonVersion a owl:DatatypeProperty ;
+    rdfs:label "Python version" ;
+    rdfs:comment "The Python version this PEP is targeted for" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range xsd:string .
+
+peps:replaces a owl:ObjectProperty ;
+    rdfs:label "replaces PEP" ;
+    rdfs:comment "The PEP that this PEP replaces" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range peps:PythonEnhancementProposal .
+
+peps:requires a owl:ObjectProperty ;
+    rdfs:label "requires PEP" ;
+    rdfs:comment "Other PEPs that this PEP depends on" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range peps:PythonEnhancementProposal .
+
+peps:resolutionDate a owl:DatatypeProperty ;
+    rdfs:label "resolution date" ;
+    rdfs:comment "The date of the resolution" ;
+    rdfs:domain peps:Resolution ;
+    rdfs:range xsd:date .
+
+peps:resolutionUrl a owl:DatatypeProperty ;
+    rdfs:label "resolution URL" ;
+    rdfs:comment "The URL of the resolution" ;
+    rdfs:domain peps:Resolution ;
+    rdfs:range xsd:anyURI .
+
+peps:status a owl:DatatypeProperty ;
+    rdfs:label "PEP status" ;
+    rdfs:comment "The current status of the PEP" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range xsd:string .
+
+peps:supersededBy a owl:ObjectProperty ;
+    rdfs:label "superseded by PEP" ;
+    rdfs:comment "The PEP that supersedes this PEP" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range peps:PythonEnhancementProposal .
+
+peps:title a owl:DatatypeProperty ;
+    rdfs:label "title of the PEP" ;
+    rdfs:comment "the title of the PEP." ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range xsd:string .
+
+peps:topic a owl:DatatypeProperty ;
+    rdfs:label "topic" ;
+    rdfs:comment "The topic area of the PEP" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range xsd:string .
+
+peps:type a owl:DatatypeProperty ;
+    rdfs:label "PEP type" ;
+    rdfs:comment "The type of the PEP" ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range xsd:string .
+
+peps:url a owl:DatatypeProperty ;
+    rdfs:label "URL of the PEP" ;
+    rdfs:comment "the URL of the PEP." ;
+    rdfs:domain peps:PythonEnhancementProposal ;
+    rdfs:range xsd:anyURI .
+
+peps:Author a owl:Class ;
+    rdfs:label "PEP Author" .
+
+peps:Post a owl:Class ;
+    rdfs:label "PEP Post" .
+
+peps:Resolution a owl:Class ;
+    rdfs:label "PEP Resolution" .
+
+peps:PythonEnhancementProposal a owl:Class ;
+    rdfs:label "Python Enhancement Proposal" .
+
