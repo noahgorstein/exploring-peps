@@ -27,5 +27,5 @@ Visualizations saved to generated/visualizations/
 ```
 
 The generated visualizations and RDF will be saved in the `generated` directory.
-- The RDF schema named [`schema.ttl`](./generated/schema.ttl) and the RDF data is saved as [`data.ttl`](./generated/data.ttl). These are included in the repository if you want to view or use them without running the code.
+- The RDF schema is saved as [`schema.ttl`](./generated/schema.ttl) and the instance RDF data is saved as [`data.ttl`](./generated/data.ttl). These are included in the repository if you want to view or use them without running the code.
 - The graph visualizations are saved as HTML in the `generated/visualizations` directory. These are not included in the repository, but you can view them in the blog post.
