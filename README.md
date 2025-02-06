@@ -2,7 +2,7 @@
 
 This is the code that accompanies by blog post on [Exploring Python Enhancement Proposals (PEPs) with Python and Graphs](https://noahgorstein.com/blog/exploring-peps-with-python-and-graphs). 
 
-The code in this repository is used to generate the graph visualizations in the blog post.
+The code in this repository is used to generate the data visualizations in the blog post.
 
 ## Installation
 
